@@ -1,0 +1,313 @@
+#body 
+{
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: dimgray;
+}
+
+/*header*/
+#menu li a
+{
+    font-family: 'Time New Roman', Arial;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+#menu li a:hover, #menu li.active a
+{
+    color: blue;
+    background: none;
+}
+.main_menu ul li:hover ul
+{
+    display: block;
+}
+
+.main_menu ul li ul 
+{
+    color: aliceblue; 
+    background-color: rgb(172, 221, 240);
+    position: absolute;
+    list-style: none;
+    display: none;
+}
+
+#frm-search
+{
+    display: block;
+    width: 450px;
+    height: 42px;
+    border: 1px solid gray;
+    padding: 4px 11px 6px;
+    border-radius: 14px;
+    margin: 0px 50px;
+}
+#searchword
+{
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 0;
+    padding: 0;
+}
+
+#btn-search
+{
+    border: none;
+    width: 36px;
+    background: url(../images/search.png) 0 0 no-repeat;
+}
+
+#social a
+{
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0;
+    height: 25px;
+    width: 27px;
+    cursor: pointer;
+}
+#social a.twitter
+{
+    background: url(../images/f-tw.png) 0 0 no-repeat;
+}
+#social a.twitter:hover
+{
+    background: url(../images/f-tw.png) 0 0 no-repeat;
+    border: tomato;
+}
+#social a.facebook
+{
+    background: url(../images/fb_icon.png) 0 0 no-repeat;
+}
+#social a.facebook:hover
+{
+    background: url(../images/fb_icon.png) 0 0 no-repeat;
+    border: tomato;
+}
+
+/*banner*/
+#banner 
+{
+    background: url(../images/BPWC.png) center bottom repeat;
+    color: yellow;
+    padding: 90px 0 50px;
+}
+
+#banner h4
+{
+    font-size: 40px;
+    line-height: 60px;
+    font-family: 'Times New Roman', cursive;
+    font-weight: 900;
+    letter-spacing: 1px; 
+    padding: 10;
+    color: black;
+}
+#btn-mua
+{
+    display: inline-block;
+    font: 30px 'Times New Roman', cursive;
+    line-height: 24px;
+    background-color: black;
+    padding: 14px 62px;
+    border-radius: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 30px 0;
+    color: yellow;
+    font-weight: bold;
+}
+
+#dots 
+{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    height: 19px;
+    line-height: 19px;
+}
+
+#dots li
+{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    text-align: left;
+    text-indent: 9999px;
+    background: white;
+    margin: 0 2px;
+    position: relative;
+}
+
+#dots li span
+{
+    border-radius: 9px;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#dots li.current span, 
+#dots li:hover span
+{
+    box-shadow: 0;
+    background: yellowgreen;
+}
+
+/*main*/
+h4
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: black; 
+    font-size: 26px;
+    margin: 10px 0;
+}
+a.readmore
+{
+    text-decoration: underline;
+    color:red;   
+}
+
+/*about*/
+.about
+{
+    background: rgb(10, 10, 10);
+    color: blanchedalmond;
+}
+h3
+{
+    font-family: 'Times New Roman', Times, serif;
+    
+    font-weight: 400;
+    color:yellowgreen;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.about div > img
+{
+    float: left;
+    margin: 20px;
+}
+
+h4
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#frm-guilh input
+{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+    padding: 10px;
+    box-shadow: 0 0 0;
+    margin: 6px 0;
+}
+
+#frm-guilh button
+{
+    float: right;
+    border: none;
+    border-radius: 14px;
+    color: black;
+    background: yellowgreen;
+    font: 22px 'Times New Roman', cursive, bolder;
+    line-height: 26px;
+    padding: 1px 34px;
+}
+
+.date 
+{
+    float: left;
+    text-align: center;
+    background: green;
+    color:white;
+    font: 20px 'Times New Roman', cursive;
+    line-height: 24px;
+    padding: 8px 0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+footer 
+{
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+footer li 
+{
+    display: inline-block;
+    padding: 0 90px 15px 0;
+}
+
+footer a
+{
+    text-decoration: none;
+    color:red;
+}
+footer nav a,
+footer a:hover
+{
+    color: yellow;
+    text-decoration: none;
+}
+footer nav a:hover,
+footer
+{
+    color: hotpink;
+    text-decoration: none;
+}
+
+.menu
+{
+    background: rgb(10, 10, 10);
+    color: blanchedalmond;
+}
+
+h2
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: rgb(28, 32, 25);
+    font-size: 40px;
+    margin: 10px 0;
+}
+#hang 
+{
+    background-color: black;
+}
+#frm-tt input
+{
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+    padding: 10px;
+    box-shadow: 0 0 0;
+    margin: 6px 0;
+}
+
+#frm-tt button
+{
+    float: right;
+    border: none;
+    border-radius: 14px;
+    color: black;
+    background: yellowgreen;
+    font: 22px 'Times New Roman', cursive, bolder;
+    line-height: 26px;
+    padding: 1px 34px;
+}
