@@ -1,1 +1,74 @@
 *{margin: 0; padding: 0;} 
+
+.navbar-light .navbar-nav.thanhmenu .nav-link {
+    font-size: 15px;
+    padding: 14px;
+    letter-spacing: 1px;
+    margin: 0px 40px;
+}
+.signup-header__background {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner-area {
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    background-image: url(http://127.0.0.1/QL_HN/uploads/hoinghi.jpg);
+    background-size: cover;
+}
+.logo {
+    width: 30%;
+    float: left;
+    line-height: 50px
+}
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+}
+.nav {
+    float: right
+}
+.nav a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin: 0 10px;
+    color: #fff;
+}
+.container h2{
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-size: 40px;
+    margin: 0px;
+}
+.container h3{
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-size: 30px;
+    margin: 0px;
+}
+header  {
+    height: 100px;
+    width: 100%;
+    z-index: 12;
+    position: absolute;
+}
+.banner-area h3 {
+    padding-top: 12%;
+    font-size: 80px;
+    color: #fff;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+.wrap {
+    padding-top: 50px;
+}

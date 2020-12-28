@@ -11,8 +11,15 @@ class ShowData extends CI_Controller {
 	{
 		$this->load->model('showData_model');
 		$dulieu = $this->showData_model->getdatabase();
-		$dulieu = array('dulieudata' => $dulieu);
+		$dulieu = array('manghoinghi' => $dulieu);
 		$this->load->view('showData_view', $dulieu, FALSE);
+	}
+	public function xemChiTiet($idnhan)	
+	{
+	    $this->load->model('showData_model');
+	    $dulieu = $this->showData_model->getDataById($idnhan);
+	    $dulieu = array('dulieunhan' => $dulieu);
+	    $this->load->view('chiTietHN', $dulieu, FALSE);
 	}
 
 

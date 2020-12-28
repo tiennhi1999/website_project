@@ -16,6 +16,7 @@ class Them_dd extends CI_Controller {
 		$ma = $this->input->post('madd');
 		$ten = $this->input->post('tendd');
 		$dc = $this->input->post('diachidd');
+		
 		$sc = $this->input->post('succhua');
 
 		//truyen vao model

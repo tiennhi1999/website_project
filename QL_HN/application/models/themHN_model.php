@@ -9,9 +9,9 @@ class themHN_model extends CI_Model {
 		parent::__construct();
 		
 	}
-	public function insert($ten, $mota, $dd, $tg)
+	public function insert($ten, $mota, $motachitiet, $anh, $dd, $tg)
 	{
-		$dulieu =  array('tenHN' => $ten,  'mota' => $mota, 'diadiem' => $dd, 'thoigian' => $tg);
+		$dulieu =  array('tenHN' => $ten,  'mota' => $mota, 'motachitiet' => $motachitiet, 'anh' => $anh, 'diadiem' => $dd, 'thoigian' => $tg);
 		$this->db->insert('hoinghi', $dulieu);
 
 		return $this->db->insert_id();

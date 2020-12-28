@@ -12,7 +12,8 @@
  	<link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
 </head>
 <body>
-	<?php require 'header_con.php'; ?>
+	<?php require 'header_con.php'; ?> 
+
 	<div class="container">
 		<h3 class="text-xs-center">Địa điểm tổ chức hội nghị</h3>
 		<hr>
@@ -22,7 +23,7 @@
 			<?php foreach ($dulieumang as $value): ?>
 				<div class="col-sm-6">
 			<div class="card">
-				<div class="card-body">
+				<div class="card-block">
 					<h4 class="card-title"><?= $value['tendd'] ?></h4>
 					<p class="card-text">Địa chỉ: <?= $value['diachi'] ?></p>
 					<p class="card-text">Sức chứa: <?= $value['succhua'] ?></p>

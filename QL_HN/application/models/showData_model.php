@@ -17,6 +17,15 @@ class showData_model extends CI_Model {
 		$ketqua = $ketqua->result_array();
 		return $ketqua;
 	}
+	public function getDataByID($idnhan)
+	{
+	    $this->db->select('*');
+	    $this->db->where('id', $idnhan);
+
+	    $dulieu = $this->db->get('hoinghi');
+	    $dulieu = $dulieu->result_array();
+	    return $dulieu;
+	}
 }
 
 /* End of file showData_model.php */
