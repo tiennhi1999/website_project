@@ -12,7 +12,7 @@
  	<link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
 </head>
 <body>
-	<?php require 'header_con.php'; ?> 
+	<?php require 'header_ad.php'; ?> 
 	<div class="container">
 		<br>
 		<h3 class="text-xs-center">Địa điểm tổ chức hội nghị</h3>
@@ -35,7 +35,7 @@
 	</div>
 	<div class="container">
 		<hr>
-		<a href="<?php echo base_url(); ?>HoiNghi/ThemDD" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+		<a href="<?php echo base_url(); ?>Admin/ThemDD" class="btn btn-primary"><i class="fa fa-plus"></i></a>
 	</div>
 </body>
 </html>

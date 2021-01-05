@@ -12,7 +12,7 @@
  	<link rel="stylesheet" href="<?= base_url() ?>/1.css">
 </head>
 <body>
-	<?php require 'header_con.php'; ?> 
+	<?php require 'header_ad.php'; ?> 
 	<div class="container-fluid">
 		<div class="row">
 			 <div class="col-sm-6">
@@ -97,7 +97,7 @@
  				.removeClass('hidden-xs-up');
 
  			 	$.ajax({
-					url: duongdan + '/HoiNghi/UpdateDulieu',
+					url: duongdan + '/Admin/UpdateDulieu',
 					type: 'post',
 					dataType: 'json',
 					data: {tendanhmuc: noidung,
@@ -123,7 +123,7 @@
 				// var tendanhmuc = $('#tendanhmuc').val();
 				// console.log(tendanhmuc);
 				$.ajax({
-					url: duongdan + '/HoiNghi/addJquery',
+					url: duongdan + '/Admin/addJquery',
 					type: 'post',
 					dataType: 'json',
 					data: {tendanhmuc: $('#tendanhmuc').val()}
@@ -135,6 +135,7 @@
 					//console.log("error");
 				})
 				.always(function(res) {
+
 					//console.log(res);
 					//dung jquery de ve ra noi dung
 					noidung = '<div class="card card-inverse card-primary mb-3 text-center">';
@@ -162,7 +163,7 @@
 				idnhan = $(this).data('href');
 				doituongxoa = $(this).parent().parent().parent();
 				$.ajax({
-					url: duongdan + '/HoiNghi/xoaDanhMuc/' + idnhan,
+					url: duongdan + '/Admin/xoaDanhMuc/' + idnhan,
 					type: 'post',
 					dataType: 'json'
 				})

@@ -14,7 +14,7 @@
  	<script src="<?= base_url() ?>/ckeditor/ckfinder/ckfinder.js"></script>
 </head>
 <body>
-	<?php require 'header_con.php'; ?> 
+	<?php require 'header_ad.php'; ?> 
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-6 themmoi">
@@ -24,7 +24,7 @@
 					<hr class="m-y-md">
 				</div>
 				<div class="formthemmoi">
-					<form action="<?php echo base_url() ?>/HoiNghi/themhoinghi" method="POST" enctype = 'multipart/form-data'>
+					<form action="<?php echo base_url() ?>Admin/themhoinghi" method="POST" enctype = 'multipart/form-data'>
 						<fieldset class="form-group">
 							<label for="formGroupExampleInput">Tên Hội Nghị</label>
 							<input name="tenhn" type="text" class="form-control" id="tenhn" placeholder="Example input">
@@ -88,7 +88,7 @@
 									<h4 class="card-title"><?php echo $value['TENHN'] ?></h4>
 									<p class="card-text"><?php echo $value['MOTANG'] ?></p>
 									<p class="card-text"><small class="text-muted">Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></small></p>
-									<a href="<?php echo base_url() ?>/HoiNghi/suaHoiNghi/<?php echo $value['MAHN']?>" class="btn btn-outline-success sua"><i class="fa fa-pencil"></i></a>
+									<a href="<?php echo base_url() ?>/Admin/suaHoiNghi/<?php echo $value['MAHN']?>" class="btn btn-outline-success sua"><i class="fa fa-pencil"></i></a>
 								</div>
 							</div>
 						</div>

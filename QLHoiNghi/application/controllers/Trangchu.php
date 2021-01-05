@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Hoinghi extends CI_Controller {
+class Trangchu extends CI_Controller {
 
 	public function __construct()
 	{
@@ -10,12 +10,11 @@ class Hoinghi extends CI_Controller {
 
 	public function index()
 	{
-		$dl = $this->HN_model->loadDanhSachTin();
+		$dl = $this->HN_model->loadDanhSach2Tin();
 		$dl = array('dulieutin' => $dl);
-		$this->load->view('Hoi_nghi', $dl);
+		$this->load->view('homepage', $dl);
 	}
-
 }
 
-/* End of file Hoinghi.php */
-/* Location: ./application/controllers/Hoinghi.php */
+/* End of file showCon.php */
+/* Location: ./application/controllers/showCon.php */

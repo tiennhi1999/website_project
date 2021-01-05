@@ -55,6 +55,7 @@ class HN_model extends CI_Model {
 	{
 	    $this->db->select('*');
 	    $dl = $this->db->get('hoi_nghi', 2, 0);
+	    	
 	    $dl = $dl->result_array();
 	    return $dl;
 	}

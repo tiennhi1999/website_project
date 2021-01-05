@@ -26,7 +26,7 @@
 				</div>
 				<?php foreach ($dulieusua as $key => $value): ?>
 				<div class="formthemmoi">
-					<form action="<?php echo base_url() ?>/HoiNghi/luutindasua" method="POST" enctype = 'multipart/form-data'>
+					<form action="<?php echo base_url() ?>Admin/luutindasua" method="POST" enctype = 'multipart/form-data'>
 						<input type="hidden" name="mahn" value="<?php echo $value['MAHN'] ?>">
 						<fieldset class="form-group">
 							<label for="formGroupExampleInput">Tên hội nghị</label>

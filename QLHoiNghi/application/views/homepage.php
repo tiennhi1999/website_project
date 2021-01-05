@@ -13,28 +13,21 @@
 </head>
 <body>
 	 <header>
-	<nav class="navbar navbar-dark ">
-	<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-				<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
-				&#9776;
-				</button>
-				<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-				<div class="logo"><a href="<?php echo base_url(); ?>showData">JoinCo.vn</a></div>
-				<ul class="nav navbar-nav thanhmenu">
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url(); ?>ShowAdd">SIGN UP</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url(); ?>ShowAdd">SIGN IN</a>
-					</li>
-				</ul>
-				</div>
-				</div>
-			</div>
-		</div>
-	</nav>	
+	<?php if($this->session->has_userdata('email'))
+	{
+		if ($this->session->userdata('loai') == 1) {
+			require 'header_ad2.php';
+		}
+		else
+		{
+			require 'header_con.php';
+		}
+	
+	}
+	else
+	{
+		require 'header_cus.php';
+	} ?>
 	</header>
 	<div class="row">
 		<div class="banner-area">
@@ -53,19 +46,20 @@
 		<div class="row">
 			<?php foreach ($dulieutin as $key => $value): ?>
 				
-			<?php endforeach ?>
+			
 			<div class="col-sm-6">
 				<div class="card-deck">
 					<div class="card">
-						<img class="card-img-top img-fluid" src="<?php echo $value['HINHANH'] ?>" alt="Card image cap">
+						<a href="<?php echo base_url(); ?>hnct/<?php echo $value['MAHN'] ?>"><img class="card-img-top img-fluid rounded" src="<?php echo $value['HINHANH'] ?>" alt="Card image cap"></a>
 						<div class="card-body">
-							<h4 class="card-title"><?php echo $value['TENHN'] ?></h4>
+							<a href="<?php echo base_url(); ?>hnct/<?php echo $value['MAHN'] ?>"><h4 class="card-title"><?php echo $value['TENHN'] ?></h4></a>
 							<p class="card-text"><?php echo $value['MOTANG'] ?></p>
 							<p class="card-text text-xs-center"><small class="text-muted ">Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></small></p>
 						</div>
 					</div>
 				</div>
 			</div>
+			<?php endforeach ?>
 	</div>
 	</div>
 	

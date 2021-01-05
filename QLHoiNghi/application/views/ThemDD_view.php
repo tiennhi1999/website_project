@@ -20,7 +20,7 @@
 	</div>
 	<div class="container">
 		<div class="col-sm-8 push-sm-2">
-			<form action="<?php echo base_url(); ?>HoiNghi/themDDMoi" method="POST" enctype="multidata/form-data">
+			<form action="<?php echo base_url(); ?>Admin/themDDMoi" method="POST" enctype="multidata/form-data">
 			<fieldset class="form-group">
 				<label for="tendd">Tên địa điểm</label>
 				<input name="tendd" type="text" class="form-control" id="tendd" placeholder="Khách sạn Majestic">
