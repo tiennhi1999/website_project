@@ -1,0 +1,88 @@
+*{margin: 0; padding: 0;} 
+
+.navbar-light .navbar-nav.thanhmenu .nav-link {
+    font-size: 15px;
+    padding: 14px;
+    letter-spacing: 1px;
+    margin: 0px 40px;
+}
+.signup-header__background {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner-area {
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1559825481-12a05cc00344?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1402&q=80);
+    background-size: cover;
+}
+.logo {
+    width: 30%;
+    float: left;
+    line-height: 50px
+}
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+}
+.nav {
+    float: right
+}
+.nav a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin: 0 10px;
+    color: #fff;
+}
+.container h2{
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-size: 40px;
+    margin: 0px;
+}
+.container h3{
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-size: 30px;
+    margin: 0px;
+}
+header  {
+    height: 100px;
+    width: 100%;
+    z-index: 12;
+    position: absolute;
+}
+.banner-area h3 {
+    padding-top: 12%;
+    font-size: 80px;
+    color: #fff;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+.wrap {
+    padding-top: 50px;
+}
+.jumbotron {
+    background-color:transparent !important; 
+}
+.bg-black {
+    background-position: center;
+    background-image: url(https://images.unsplash.com/photo-1559825481-12a05cc00344?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1402&q=80);
+}
+.py-5 {
+    padding-bottom: 3rem!important;
+    padding-top: 3rem!important;
+}
+.fa-facebook {
+        padding-right: 13px;
+}
