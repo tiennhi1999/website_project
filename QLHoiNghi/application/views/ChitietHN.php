@@ -28,40 +28,41 @@
 	{
 		require 'header_cus2.php';
 	} ?>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-					<div class="text-xs-center">
-					<h1 class="display-3">Danh sách hội nghị</h1>
-					<p class="lead">Danh sách các hội nghị.</p>
-					<hr class="m-y-md">
-				</div>
-			</div>
 		
-		</div>
-	</div>
 	<div class="container">
 		<div class="row">		
 			<div class="col-sm-9">
 
 				<!-- khoi danh sach tin -->
-				<div class="row">
+				<div class="mottinchuan">
 					<?php foreach ($dulieutin as $key => $value): ?>
-				<div class="col-sm-6">
-				<div class="card-deck">
-					<div class="card">
-						<a href="<?php echo base_url(); ?>hnct/<?php echo $value['MAHN'] ?>"><img class="card-img-top img-fluid rounded" src="<?php echo $value['HINHANH'] ?>" alt="Card image cap"></a>
-						<div class="card-body">
-							<a href="<?php echo base_url(); ?>HoiNghi/chiTietHN/<?php echo $value['MAHN'] ?>"><h4 class="card-title"><?php echo $value['TENHN'] ?></h4></a>
-							<p class="card-text"><?php echo $value['MOTANG'] ?></p>
-							<p class="card-text text-xs-center"><small class="text-muted ">Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></small></p>
-						</div>
-					</div>
+	
+							<div class="text-xs-center">
+								<h3 class="tieudetin1 fontoswarld"><?php echo $value['TENHN'] ?></h3>
+								<hr class="m-y-md">
+							</div>
+							<img class="" src="<?php echo $value['HINHANH'] ?>" alt="Card image cap">
+							<br>
+							<br>
+							<p ><?php echo $value['MOTANG'] ?></p>
+							
+							<p class="ngaythang1"> Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></p>
+							
+							<br>
+							<?php foreach ($diadiem as $key => $ddiem): ?>
+							<p ><strong>Địa điểm:</strong>  <?php echo $ddiem['TENDD'] ?></p>
+							<p ><strong>Địa chỉ:</strong>  <?php echo $ddiem['DIACHI'] ?></p>
+							<?php endforeach ?>
+							
+							
+							
+							<p class="card-text"><?php echo $value['MOTA'] ?></p>
+						
+							
+
+					<?php endforeach ?>
 				</div>
 			</div>
-					<?php endforeach ?>
-					</div>
-				</div>
 				
 				<!-- het khoi danh sach tin -->
 				<div class="col-sm-3">

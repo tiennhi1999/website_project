@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>/vendor/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url() ?>/vendor/font-awesome.css">
  	<link rel="stylesheet" href="<?php echo base_url(); ?>login.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
 </head>
 <body >
     <div class="loginbox">
@@ -22,7 +23,7 @@
             <input type="password" name="matkhau" placeholder="Mật khẩu" >
             <input type="submit"  value="Đăng nhập">
             <a href="forgotpass.html">Bạn quên mật khẩu?</a><br>
-            <a href="signup.html">Bạn chưa có tài khoản đăng nhập?</a>
+            <a href="<?= base_url() ?>Dang_ky">Bạn chưa có tài khoản đăng nhập?</a>
         </form>      
     </div>
 </body>

@@ -1,18 +1,31 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+	
 class 	Admin extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('HN_model');
+		if($this->session->has_userdata('email'))
+	{
+		if ($this->session->userdata('loai') != 1) {
+		
+			redirect('Trangchu','refresh');
+		}
+	
+	}
 	}
 
 	public function index()
 	{
-		$dl = $this->HN_model->loadDanhSach2Tin();
-		$dl = array('dulieutin' => $dl);
-		$this->load->view('homepage', $dl);
+		$dl1 = $this->HN_model->loadDanhMuc();
+		$dl2 = $this->HN_model->loadDanhSachTin();
+		$dl3 = $this->HN_model->loadDiaDiem();
+		$dulieu = array('dulieudanhmuc' =>  $dl1,  
+						'dulieutin' =>  $dl2,
+						'dulieudd' =>  $dl3
+					);
+	    $this->load->view('QuanlyTin', $dulieu);	
 	}
 	public function themhoinghi()
 	{

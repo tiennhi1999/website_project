@@ -6,11 +6,9 @@
 				&#9776;
 				</button>
 				<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-				<div class="logo"><a href="<?php echo base_url(); ?>showData">JoinCo.vn</a></div>
+				<div class="logo"><a href="<?php echo base_url(); ?>Hoinghi">JoinCo.vn</a></div>
 				<ul class="nav navbar-nav thanhmenu">
-					<li class="nav-item active">
-						<a class="nav-link" href="<?= base_url() ?>showCon">Home</span></a>
-					</li>
+	
 					<li class="nav-item">
 						<a class="nav-link" href="<?= base_url() ?>Admin/quanlytin">Quan lý tin</a>
 					</li>

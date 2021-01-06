@@ -12,7 +12,21 @@
  	<link rel="stylesheet" href="<?= base_url() ?>/1.css">
 </head>
 <body>
-	<?php require 'header_ad.php'; ?> 
+	<?php if($this->session->has_userdata('email'))
+	{
+		if ($this->session->userdata('loai') == 1) {
+			require 'header_ad.php';
+		}
+		else
+		{
+			redirect('Trangchu','refresh');
+		}
+	
+	}
+	else
+	{
+		redirect('Trangchu','refresh');
+	} ?>
 	<div class="container-fluid">
 		<div class="row">
 			 <div class="col-sm-6">

@@ -11,9 +11,20 @@ class Hoinghi extends CI_Controller {
 	public function index()
 	{
 		$dl = $this->HN_model->loadDanhSachTin();
-		$dl = array('dulieutin' => $dl);
-		$this->load->view('Hoi_nghi', $dl);
+		$dl2 = $this->HN_model->loadDanhMuc();
+		$dulieu = array('dulieutin' => $dl, 'cacdanhmuc' => $dl2);
+		$this->load->view('Hoi_nghi', $dulieu);
 	}
+	public function chiTietHN($idnhan)
+	{
+	    $dl = $this->HN_model->loadByID($idnhan);
+		$dl2 = $this->HN_model->loadDanhMuc();
+		$dl3 = $this->HN_model->loadDiaDiemTheoHN($idnhan);
+
+		$dulieu = array('dulieutin' => $dl, 'cacdanhmuc' => $dl2, 'diadiem' => $dl3);
+		$this->load->view('chiTietHN', $dulieu);
+	}
+
 
 }
 

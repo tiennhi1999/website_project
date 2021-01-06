@@ -23,7 +23,15 @@ class Login extends CI_Controller {
 	    {
 	    	$dulieu = array('email' => $email, 'matkhau' => $matkhau, 'loai' => $loai );
 	    	$this->session->set_userdata($dulieu);
-	    	redirect('Admin','refresh');
+	    	if($loai == 0)
+	    	{
+	    		redirect('Trangchu','refresh');
+	    	}
+	    	else
+	    	{
+	    		redirect('Admin','refresh');
+	    	}
+	    	
 	    }
 	    else
 	    {

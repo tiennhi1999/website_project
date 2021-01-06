@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="<?= base_url() ?>/vendor/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url() ?>/vendor/font-awesome.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>signup.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
 </head>
     </head>
     <body>
+        <?php require 'header_cus2.php' ?>
         <div class="to">
             <form class="form" action="<?php echo base_url(); ?>/dang_ky/XacNhan/" method='post'>
                 <h2>Đăng ký tài khoản</h2>

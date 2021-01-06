@@ -12,7 +12,21 @@
  	<link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
 </head>
 <body>
-	<?php require 'header_ad.php'; ?> 
+		<?php if($this->session->has_userdata('email'))
+	{
+		if ($this->session->userdata('loai') == 1) {
+			require 'header_ad.php';
+		}
+		else
+		{
+			redirect('Trangchu','refresh');
+		}
+	
+	}
+	else
+	{
+		redirect('Trangchu','refresh');
+	} ?> 
 	<div class="container">
 		<br>
 		<h3 class="text-xs-center">Địa điểm tổ chức hội nghị</h3>

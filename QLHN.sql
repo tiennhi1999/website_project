@@ -1,23 +1,14 @@
 ﻿--drop database QLHoiNghi
 create database QLHoiNghi
 go
-use [QLHoiNghi]
-go 
-/*==============================================================*/
-/* Table: ADMIN                                                 */
-/*==============================================================*/
-DELETE FROM USER_
-
-CREATE TRIGGER TUDONG
-ON USER_
-IF INSERT, UPDATE
+ 
 
 /*==============================================================*/
 /* Table: DIADIEMTC                                             */
 /*==============================================================*/
 create table DIADIEMTC 
 (
-   MADD                 int identity(1,1)    not null,
+   MADD                 int   not null,
    TENDD                varchar(100)         null,
    DIACHI               varchar(100)         null,
    SUCCHUA              int                  null,
@@ -30,7 +21,7 @@ create table DIADIEMTC
 /*==============================================================*/
 create table DS_DANGKI 
 (
-   MA_DSDK              int identity(1,1)    not null,
+   MA_DSDK              int   not null,
    MA_USER              int                  null,
    HN_ID                int                  null,
    MAAD                 int                  null,
@@ -43,7 +34,7 @@ create table DS_DANGKI
 /*==============================================================*/
 create table DS_THAMGIA 
 (
-   MA_DSTG              int identity(1,1)    not null,
+   MA_DSTG              int     not null,
    MA_USER              int                  null,
    MAHN                 int                  null,
    constraint PK_DS_THAMGIA primary key(MA_DSTG)
@@ -55,11 +46,11 @@ create table DS_THAMGIA
 /*==============================================================*/
 create table HOI_NGHI 
 (
-   MAHN                 int identity(1,1)    not null,
+   MAHN                 int     not null,
    MADD                 int                  null,
    TENHN                varchar(100)         null,
    MOTANG               varchar(100)         null,
-   MOTA                 varchar(100)         null,
+   MOTA                 text        null,
    HINHANH              text                 null,
    THOIGIAN             datetime             null,
   
@@ -72,16 +63,20 @@ create table HOI_NGHI
 /*==============================================================*/
 create table USER_
 (
-   MA_USER              int identity(1,1)    not null,
+   MA_USER              int    not null,
    TENUSER              varchar(50)         null,
    USERNAME             varchar(50)         null,
    USER_PWD             varchar(50)         null,
    USER_EMAIL           varchar(100)         null,
-   LEV                int                  null,
+   level               int                  null,
    CHAN                 bit                  null,
    constraint PK_USER primary key (MA_USER)
 );
-
+create table danhmuc
+(
+	id int;
+	tedanhmuc varchar(50);
+}
 
 /*==============================================================*/
 /* Index: QUA_N_LY__FK                                          */

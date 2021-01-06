@@ -97,6 +97,25 @@ class HN_model extends CI_Model {
 	     $this->db->where('mahn', $mahn);
 	     return $this->db->update('hoi_nghi', $dl);
 	}
+	public function loadByID($id)
+	{
+	    $this->db->select('*');
+	    $this->db->where('mahn', $id);
+	    $dl = $this->db->get('hoi_nghi');
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
+	public function loadDiaDiemTheoHN($id)
+	{
+	    $this->db->select('*');
+	    $this->db->from('diadiemtc');
+	    $this->db->join('hoi_nghi', 'hoi_nghi.madd = diadiemtc.madd', 'left');
+	     $this->db->where('hoi_nghi.mahn', $id);
+	    $dl = $this->db->get();
+
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
 }
 
 /* End of file HN_model.php */

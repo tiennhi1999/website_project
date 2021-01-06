@@ -86,3 +86,64 @@ header  {
 .fa-facebook {
         padding-right: 13px;
 }
+.phansearch {
+    position: relative;
+}
+.khoilistlink.my-2 {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.khoilistlink ul.fontroboto {color: #c2c3c5;margin-left: 18px;}
+
+.khoilistlink ul li a {
+    color: #777;
+    line-height: 44px;
+    font-size: 14px;
+}
+
+.khoilistlink h3.fontoswarld {
+    font-size: 18px;
+    line-height: 50px;
+    color: #333;
+}
+
+button.iconsearch {
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #7f7f7f;
+    cursor: pointer;
+}
+
+.phansearch {
+    position: relative;
+}
+.ngaythang1 {
+    line-height: 24px;
+    font-size: 17px;
+    display: inline-block;
+    font-family: roboto slab;
+    color: #777;
+    padding-bottom: 19px;
+}
+.mottinchuan p.fontroboto {
+    color: #777;
+    line-height: 24px;
+    font-size: 14px;
+}
+.mottinchuan img {
+    width: 100%;
+}
+.contact .mottinchuan img {
+    margin-bottom: 20px;
+}
+.fontoswarld{font-family: 'Oswald', sans-serif;}
+
+a.tieudetin1.fontoswarld {}
+
+.dtdb.fontoswarld {
+    font-weight: bold;
+    font-size: 25px;
+}
