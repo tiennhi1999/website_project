@@ -23,19 +23,24 @@
 			<form action="<?php echo base_url(); ?>Admin/themDDMoi" method="POST" enctype="multidata/form-data">
 			<fieldset class="form-group">
 				<label for="tendd">Tên địa điểm</label>
-				<input name="tendd" type="text" class="form-control" id="tendd" placeholder="Khách sạn Majestic">
+				<input name="tendd" type="text" class="form-control" id="tendd" placeholder="Khách sạn Majestic" required>
 			</fieldset>
 			<fieldset class="form-group">
 				<label for="diachidd">Địa chỉ</label>
-				<input name="diachidd" type="text" class="form-control" id="diachidd" placeholder=" 1 Đồng Khởi Quận 1 TPHCM">
+				<input name="diachidd" type="text" class="form-control" id="diachidd" placeholder=" 1 Đồng Khởi Quận 1 TPHCM" required>
 			</fieldset>
 			<fieldset class="form-group">
 				<label for="succhua">Sức chứa</label>
-				<input name="succhua" type="text" class="form-control" id="succhua" placeholder="450">
+				<input name="succhua" type="text" class="form-control" id="succhua" placeholder="450" required>
 			</fieldset>
 			<input type="submit" class="btn btn-success btn-block" value="Thêm địa điểm">
 		</form>
 		</div>
 	</div>
 </body>
+<br>
+<br>
+<br>
+<br>
+<?php require 'footer.php'; ?>
 </html>

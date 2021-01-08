@@ -61,6 +61,14 @@ class Hoinghi extends CI_Controller {
 		$dulieu = array('dulieutin' => $dl, 'cacdanhmuc' => $dl2);
 		$this->load->view('HoinghiCT', $dulieu);
 	}
+	public function timKiem()
+	{
+	    $tieude = $this->input->post('tieude');
+	    $dl = $this->HN_model->searchTen($tieude);
+	    $dl2 = $this->HN_model->loadDanhMuc();
+		$dulieu = array('dulieutin' => $dl, 'cacdanhmuc' => $dl2);
+		$this->load->view('Hoi_nghi', $dulieu);
+	}
 	
 }
 

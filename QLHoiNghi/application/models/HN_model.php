@@ -194,6 +194,44 @@ class HN_model extends CI_Model {
 	    return $dl;
 
 	}
+	public function searchTen($ten)
+	{
+	    $this->db->like('tenhn', $ten, 'BOTH');
+	    $this->db->order_by('mahn', 'desc');
+	    $dl = $this->db->get('hoi_nghi');
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
+	public function loadUserByHN($idhn)
+	{
+	    $this->db->select('*');
+	    $this->db->from('ds_dangki');
+	    $this->db->join('user_', 'ds_dangki.ma_user = user_.ma_user', 'left');
+	    $this->db->where('hn_id', $idhn);
+	    $dl = $this->db->get();
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
+	public function loadUsers()
+	{
+	    $this->db->select('*');
+	    $this->db->where('level', 0);
+	    $dl = $this->db->get('user_');
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
+	public function updateChan($id)
+	{
+	    $this->db->where('ma_user', $id);
+	    $dl = array('chan' => 1 );
+	    return $this->db->update('user_', $dl);
+	}
+	public function updateBoChan($id)
+	{
+	    $this->db->where('ma_user', $id);
+	    $dl = array('chan' => 0 );
+	    return $this->db->update('user_', $dl);
+	}
 	
 }
 

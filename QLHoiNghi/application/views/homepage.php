@@ -79,13 +79,6 @@
 	</div>
 	
 </body>
-<footer class="bg-black py-5">
-		<div class="container">
-			<div class="text-xs-center">
-				<a href="https://www.facebook.com/au.ou.9889"><i class="fa fa-facebook"></i></a>
-				<a href="https://www.facebook.com/au.ou.9889"> <i class="fa fa-instagram"></i></i></a>
-			</div>
-			<div class="small text-xs-center text-muted">Nhom 8 @ </div>
-		</div>
-	</footer>
+	
+	<?php require 'footer.php'; ?>
 </html>

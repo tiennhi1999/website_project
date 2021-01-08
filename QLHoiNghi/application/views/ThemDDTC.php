@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="refresh" content="1; url=<?= base_url() ?>Admin">
+	<meta http-equiv="refresh" content="1; url=<?= base_url() ?>Admin/DiaDiemToChuc">
 	<title>Thành công</title>
 	<script type="text/javascript" src="<?= base_url() ?>/vendor/bootstrap.js"></script>
  	<script type="text/javascript" src="<?= base_url() ?>/1.js"></script>
@@ -13,11 +13,11 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			 <div class="alert alert-light" role="alert">
-			 	Bạn đã đăng nhập <strong>thành công</strong> !
+			<div class="jumbotron">
+			<div class="alert alert-light" role="alert">
+			 	<h1><strong>Bạn đã thêm địa điểm thành công</strong> !</h1>
 			 </div>
-		</div>
+			</div>
 	</div>
 </body>
 

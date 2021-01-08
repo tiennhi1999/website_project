@@ -11,7 +11,7 @@ class signup_model extends CI_Model {
 	}
 	public function insertUser($ten, $username, $password, $sdt, $email)
 	{
-	    $dl = array('tenuser' => $ten, 'username' => $username, 'user_pwd' => $password, 'user_email' => $email);
+	    $dl = array('tenuser' => $ten, 'username' => $username, 'user_pwd' => $password, 'user_email' => $email, 'sdt' => $sdt);
 	    $this->db->insert('user_', $dl);
 	    return $this->db->insert_id();
 	}

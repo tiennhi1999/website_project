@@ -13,11 +13,12 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			 <div class="alert alert-light" role="alert">
-			 	Bạn đã đăng nhập <strong>thành công</strong> !
+			<div class="jumbotron">
+			<div class="alert alert-light" role="alert">
+			 	<h1><strong>Duyệt thành công</strong> !</h1>
 			 </div>
-		</div>
+			</div>
+			
 	</div>
 </body>
 

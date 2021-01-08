@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
 </head>
 <body >
+    <?php require 'header_cus2.php' ?>
     <div class="loginbox">
         <h1>ĐĂNG NHẬP TÀI KHOẢN</h1>
         <div class="alert alert-danger" role="alert">
@@ -27,4 +28,5 @@
         </form>      
     </div>
 </body>
+
 </html>

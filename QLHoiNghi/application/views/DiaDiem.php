@@ -52,4 +52,13 @@
 		<a href="<?php echo base_url(); ?>Admin/ThemDD" class="btn btn-primary"><i class="fa fa-plus"></i></a>
 	</div>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php require 'footer.php'; ?>
 </html>

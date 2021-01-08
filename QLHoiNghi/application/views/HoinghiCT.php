@@ -20,6 +20,9 @@
 	<?php if($this->session->has_userdata('email'))
 	{
 			require 'header_con.php';
+	}
+	else {
+		redirect('Trangchu','refresh');
 	} ?>
 	<div class="container">
 		<div class="row">
@@ -70,9 +73,11 @@
 				<!-- het khoi danh sach tin -->
 				<div class="col-sm-3">
 					<div class="phansearch  wow  fadeInUp">
-							 <input type="text" class="form-control phansearchct"  placeholder="Search">
+							 <form action="<?php echo base_url(); ?>HoiNghi/timkiem" method="post">
+							 <input name="tieude" type="text" class="form-control phansearchct"  placeholder="Search">
 							 
 							<button type="submit" class="iconsearch"><i class="fa fa-search"></i></button>
+						</form>
 						
 					</div>
 
@@ -93,6 +98,12 @@
 		</div>
 	</div>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php require 'footer.php'; ?>
 <script>
 // Add active class to the current button (highlight it)
 	$(function(){

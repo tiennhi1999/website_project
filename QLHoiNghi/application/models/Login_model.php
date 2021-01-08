@@ -15,10 +15,11 @@ class Login_model extends CI_Model {
 	    $this->db->where('user_email', $email);
 	    $this->db->where('user_pwd', $matkhau);
 	    $dl = $this->db->get('user_');
+	    $dl = $dl->result_array();
 	    if(!empty($dl))
 	    {
-	    	$dl = $dl->result_array();
-	    $dl = $dl[0]['level'];
+	    	
+	   		$dl = $dl[0]['level'];
 	   
 	    }
 	    else
@@ -27,6 +28,25 @@ class Login_model extends CI_Model {
 	    }
 	    return $dl;
 	}
+	public function getChan($email, $matkhau)
+		{
+		    $this->db->select('*');
+		    $this->db->where('user_email', $email);
+		    $this->db->where('user_pwd', $matkhau);
+		    $dl = $this->db->get('user_');
+		    $dl = $dl->result_array();
+		    if(!empty($dl))
+		    {
+		    	
+		   		$dl = $dl[0]['CHAN'];
+		   
+		    }
+		    else
+		    {
+		     $dl = '';
+		    }
+		    return $dl;
+		}
 
 }	
 

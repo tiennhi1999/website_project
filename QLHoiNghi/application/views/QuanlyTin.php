@@ -79,7 +79,7 @@
 							</textarea>
 						</fieldset>
 						<fieldset class="form-group">
-							<input type="submit" value="Thêm tin">
+							<input type="submit" value="Thêm tin" class="btn btn-success">
 						</fieldset>
 					</form>
 				</div>
@@ -102,7 +102,9 @@
 									<h4 class="card-title"><?php echo $value['TENHN'] ?></h4>
 									<p class="card-text"><?php echo $value['MOTANG'] ?></p>
 									<p class="card-text"><small class="text-muted">Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></small></p>
-									<a href="<?php echo base_url() ?>/Admin/suaHoiNghi/<?php echo $value['MAHN']?>" class="btn btn-outline-success sua"><i class="fa fa-pencil"></i></a>
+									<a href="<?php echo base_url() ?>Admin/suaHoiNghi/<?php echo $value['MAHN']?>" class="btn btn-outline-success sua"><i class="fa fa-pencil"></i></a>
+									<a href="<?php echo base_url() ?>Admin/duyetHoiNghi/<?php echo $value['MAHN']?>" class="btn btn-outline-success sua"><i class="fas fa-check-circle"></i></a>
+									
 								</div>
 							</div>
 						</div>
@@ -127,4 +129,12 @@
 	});
 	</script>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<?php require 'footer.php'; ?>
 </html>

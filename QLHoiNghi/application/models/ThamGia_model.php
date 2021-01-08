@@ -32,12 +32,18 @@ class ThamGia_model extends CI_Model {
 	    return $this->db->insert_id();
 	}
 	public function deleteTG($iduser, $idhn)
-		{
-		   $this->db->where('ma_user', $iduser);
+	{
+	   $this->db->where('ma_user', $iduser);
 		   $this->db->where('hn_id', $idhn);
 		   return $this->db->delete('ds_dangki');
 
-		}
+	}
+	public function updateTG($idds)
+	{
+	    $this->db->where('ma_dsdk', $idds);
+	    $dl = array('duyet' => 1 );
+	    return $this->db->update('ds_dangki', $dl);
+	}
 
 }
 

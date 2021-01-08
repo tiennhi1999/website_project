@@ -29,13 +29,13 @@
 	}
 	else
 	{
-		require 'header_cus2.php';
+		redirect('Trangchu','refresh');
 	} ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-					<div  style="color: #2c3e50">
-					<h1 class="display-5">DANH SÁCH CÁC HỘI NGHỊ</h1>
+					<div class="text-xs-center"  style="color: #2c3e50">
+					<h1 class="display-5">CHỈNH SỬA THÔNG TIN CÁ NHÂN</h1>
 					
 					<hr class="m-y-md">
 				</div>
@@ -45,61 +45,50 @@
 	</div>
 	<div class="container">
 		<div class="row">		
-			<div class="col-sm-9">
+			<div class="col-sm-9 push-sm-2">
 
 				<!-- khoi danh sach tin -->
-				<div class="row">
-					<?php foreach ($dulieutin as $key => $value): ?>
-				<div class="col-sm-6">
-				<div class="card-deck">
-					<div class="card">
-						<a href="<?php echo base_url(); ?>HoiNghi/chiTietHN/<?php echo $value['MAHN'] ?>"><img class="card-img-top img-fluid rounded" src="<?php echo $value['HINHANH'] ?>" alt="Card image cap"></a>
-						<div class="card-body">
-							<a class="tieudetin" href="<?php echo base_url(); ?>HoiNghi/chiTietHN/<?php echo $value['MAHN'] ?>"><h4 class="card-title"><?php echo $value['TENHN'] ?></h4></a>
-							<p class="card-text"><?php echo $value['MOTANG'] ?></p>
-							<p class="card-text text-xs-center"><small class="text-muted ">Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></small></p>
-						</div>
-					</div>
-				</div>
-			</div>
+		
+				<?php foreach ($thongtin as $key => $value): ?>
+				<form action="<?php echo base_url(); ?>Profile/suaThongtin" method= "post">
+					<fieldset class="form-group">
+						<label for="tenuser">Họ và tên:</label>
+						<input type="hidden" name="ma_user" value="<?php echo $value['MA_USER'] ?>">
+						<input name="tenuser" type="text" class="form-control" id="tenuser" value="<?php echo $value['TENUSER'] ?>">
+					</fieldset>
+					<fieldset class="form-group">
+						<label for="username">Tên người dùng:</label>
+						<input name="username" type="text" class="form-control" id="username" value="<?php echo $value['USERNAME'] ?>">
+					</fieldset>
+					<fieldset class="form-group">
+						<label for="passw">Mật khẩu:</label>
+						<input name="passw" type="password" class="form-control" id="passw" value="<?php echo $value['USER_PWD'] ?>">
+					</fieldset>
+					
+					<fieldset class="form-group">
+						<label for="email">Email: </label>
+						<input name="email" type="text" class="form-control" id="email" value="<?php echo $value['USER_EMAIL'] ?>">
+					</fieldset>
+					<fieldset class="form-group">
+						<label for="sdt">Email: </label>
+						<input name="sdt" type="text" class="form-control" id="sdt" value="<?php echo $value['SDT'] ?>">
+					</fieldset>
+
+					<fieldset class="form-group">
+
+						<input type="submit" value="Lưu" class="btn btn-outline-success btn-block btn-lg">
+					</fieldset>
+					
+				</form>
 					<?php endforeach ?>
-					</div>
-				</div>
+				
+			</div>
 				
 				<!-- het khoi danh sach tin -->
-				<div class="col-sm-3">
-					<div class="phansearch  wow  fadeInUp">
-							<form action="<?php echo base_url(); ?>HoiNghi/timkiem" method="post">
-							 <input name="tieude" type="text" class="form-control phansearchct"  placeholder="Search">
-							 
-							<button type="submit" class="iconsearch"><i class="fa fa-search"></i></button>
-						
-						</form>
-						
-					</div>
-
-					<div class="khoilistlink my-2  wow  fadeInUp" id="myDIV">
-						<h3 class="fontoswarld">Danh mục </h3>
-						<ul class="fontroboto" >
-									<?php foreach ($cacdanhmuc as $key => $value): ?>
-								<li><a  href="<?php echo base_url() ?>HoiNghi/danhmuc/<?php echo  $value['id'] ?>"> <?php echo $value['tendanhmuc'] ?></a></li>
-							<?php endforeach ?>
-						</ul>
-					</div><!--  	het listlink  -->
-
-					
-
-				</div>  <!-- HET COT 3 -->
 			</div>
 		</div>
 	</div>
 </body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>

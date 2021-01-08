@@ -19,13 +19,17 @@ class Login extends CI_Controller {
 	    $email = $this->input->post('email');
 	    $matkhau = $this->input->post('matkhau');
 	    $loai = $this->Login_model->dangnhap($email, $matkhau);
-	    if($loai != null)
+	    $chan = $this->Login_model->getChan($email, $matkhau);
+	    if($loai != null && $chan == 0)
 	    {
-	    	$dulieu = array('email' => $email, 'matkhau' => $matkhau, 'loai' => $loai );
+	    	$dulieu = array('email' => $email, 'matkhau' => $matkhau, 'loai' => $loai);
 	    	$this->session->set_userdata($dulieu);
-	    	if($loai == 0)
+	    	if($loai == 0 && $chan == 0)
 	    	{
 	    		redirect('Trangchu','refresh');
+	    	}
+	    	else if ($loai == 0 && $chan == 1) {
+	    		redirect('Dangnhap','refresh');
 	    	}
 	    	else
 	    	{

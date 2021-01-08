@@ -21,7 +21,7 @@ body
 {
     border: 1px solid #80808000;
     grid-column: 5/9;
-    grid-row: 6;
+    grid-row: -3/7;
     height: 590px;
     width: 570px;
     display: flex;

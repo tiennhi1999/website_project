@@ -147,7 +147,7 @@ class 	Admin extends CI_Controller {
 
 	    if($this->HN_model->insertDD($tendd, $diachidd, $succhua))
 	    {
-	    	$this->load->view('thanhcong');
+	    	$this->load->view('ThemDDTC');
 	    }
 	}
 	public function suaHoiNghi($idnhan)
@@ -227,6 +227,26 @@ class 	Admin extends CI_Controller {
 			$this->load->view('thanhcong2');
 		}
 		
+	}
+	public function duyetHoiNghi($idhn)
+	{
+	    $dl = $this->HN_model->loadUserByHN($idhn);
+	    $dl = array('danhsach' => $dl );
+	    $this->load->view('danhsachDK', $dl, FALSE);
+	}
+	public function quanLyTruyCap()
+	{
+	    $dl = $this->HN_model->loadUsers();
+	    $dl = array('danhsach' => $dl );
+	    $this->load->view('QuanLyUser', $dl, FALSE);
+	}
+	public function chan($id)
+	{
+	    $this->HN_model->updateChan($id);
+	}
+	public function bochan($id)
+	{
+		$this->HN_model->updateBoChan($id);
 	}
 
 }

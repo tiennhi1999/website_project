@@ -78,10 +78,11 @@
 				<!-- het khoi danh sach tin -->
 				<div class="col-sm-3">
 					<div class="phansearch  wow  fadeInUp">
-							 <input type="text" class="form-control phansearchct"  placeholder="Search">
+						<form action="<?php echo base_url(); ?>HoiNghi/timkiem" method="post">
+							 <input name="tieude" type="text" class="form-control phansearchct"  placeholder="Search">
 							 
 							<button type="submit" class="iconsearch"><i class="fa fa-search"></i></button>
-						
+						</form>
 					</div>
 
 					<div class="khoilistlink my-2  wow  fadeInUp">
@@ -132,6 +133,5 @@
 	</div>
 	
 </body>
-<script >
-</script>
+<?php require 'footer.php'; ?>
 </html>

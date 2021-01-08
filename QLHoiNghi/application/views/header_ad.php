@@ -21,6 +21,13 @@
 			<li class="nav-item">
 				<a class="nav-link" href="<?= base_url() ?>Admin/DiaDiemToChuc">Nơi tổ chức</a>
 			</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url() ?>Profile">Profile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url() ?>Admin/quanLyTruyCap">Quản lý User</a>
+				</li>
+
 			<li class="nav-item">
 				<a class="nav-link" href="<?= base_url() ?>Login/dangxuat">Đăng xuất</a>
 			</li>

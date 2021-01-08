@@ -31,5 +31,9 @@ class DangKiTG extends CI_Controller {
 			$this->load->view('dangKiTC');
 			}
 		}
+		public function duyet($idds)
+		{
+		   $this->ThamGia_model->updateTG($idds);
+		}
 
 }
