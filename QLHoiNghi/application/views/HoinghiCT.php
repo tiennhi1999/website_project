@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Quan ly tin</title>
+	<title>Hội nghị của tôi</title>
 		<script type="text/javascript" src="<?= base_url() ?>/vendor/bootstrap.js"></script>
  	<script type="text/javascript" src="<?= base_url() ?>/1.js"></script>
  	<script src="https://kit.fontawesome.com/98a2e27e25.js" crossorigin="anonymous"></script>
@@ -19,24 +19,14 @@
 <body>
 	<?php if($this->session->has_userdata('email'))
 	{
-		if ($this->session->userdata('loai') == 1) {
-			require 'header_ad.php';
-		}
-		else
-		{
 			require 'header_con.php';
-		}
-	}
-	else
-	{
-		require 'header_cus2.php';
 	} ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-					<div  style="color: #2c3e50">
-					<h1 class="display-5">DANH SÁCH CÁC HỘI NGHỊ</h1>
-					
+					<div class="text-xs-center">
+					<h1 class="display-5">HỘI NGHỊ CỦA TÔI</h1>
+					<br>
 					<hr class="m-y-md">
 				</div>
 			</div>
@@ -58,6 +48,17 @@
 							<a class="tieudetin" href="<?php echo base_url(); ?>HoiNghi/chiTietHN/<?php echo $value['MAHN'] ?>"><h4 class="card-title"><?php echo $value['TENHN'] ?></h4></a>
 							<p class="card-text"><?php echo $value['MOTANG'] ?></p>
 							<p class="card-text text-xs-center"><small class="text-muted ">Ngày diễn ra:  <?php echo $value['THOIGIAN'] ?></small></p>
+							<?php if($value['duyet'] == 0) {?>
+								<div class="alert alert-danger" role="alert">
+									<p class="card-text text-xs-center" >Đang đợi duyệt</p>
+								</div>
+							<?php }
+							else {?>
+								<div class="alert alert-success" role="alert">
+									<p class="card-text text-xs-center" style="color: green">Đã duyệt</p>
+								</div>
+							
+							<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -78,9 +79,10 @@
 					<div class="khoilistlink my-2  wow  fadeInUp" id="myDIV">
 						<h3 class="fontoswarld">Danh mục </h3>
 						<ul class="fontroboto" >
-									<?php foreach ($cacdanhmuc as $key => $value): ?>
-								<li><a  href="<?php echo base_url() ?>/HoiNghi/danhmuc/<?php echo  $value['id'] ?>"> <?php echo $value['tendanhmuc'] ?></a></li>
-							<?php endforeach ?>
+					
+						<li><a  href="<?php echo base_url() ?>/HoiNghi/dangDuyet">Đang đợi duyệt</li>
+						<li><a  href="<?php echo base_url() ?>/HoiNghi/daDuyet">Đã duyệt</li>
+							
 						</ul>
 					</div><!--  	het listlink  -->
 
@@ -100,6 +102,10 @@
 			$(this).parent().find('activing').removeClass('activing');
 			$(this).addClass('btn');
 			$(this).addClass('activing');
+			
+			
+
+			
 		});
 	})
 </script>

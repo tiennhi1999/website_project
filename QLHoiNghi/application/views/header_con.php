@@ -11,13 +11,13 @@
 				<div class="logo"><a href="<?php echo base_url(); ?>Trangchu">JoinCo.vn</a></div>
 				<ul class="nav navbar-nav">
 			<li class="nav-item active">
-				<a class="nav-link" href="<?= base_url() ?>HoiNghi">Home</span></a>
+				<a class="nav-link" href="<?= base_url() ?>Trangchu">Home</span></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="<?= base_url() ?>HoiNghi">Hội nghị</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="<?= base_url() ?>DanhsachHn">Hội nghị của tôi</a>
+				<a class="nav-link" href="<?= base_url() ?>HoiNghi/hoiNghiCuaToi">Hội nghị của tôi</a>
 			</li>
 			<li class="nav-item">	
 				<a class="nav-link" href="<?= base_url() ?>Login/dangxuat">Đăng xuất</a>

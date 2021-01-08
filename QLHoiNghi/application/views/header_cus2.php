@@ -10,7 +10,7 @@
 				<div class="logo"><a href="<?php echo base_url(); ?>Trangchu">JoinCo.vn</a></div>
 				<ul class="nav navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="<?= base_url() ?>HoiNghi">Trang chủ</span></a>
+						<a class="nav-link" href="<?= base_url() ?>Trangchu">Trang chủ</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="<?= base_url() ?>HoiNghi">Hội nghị</a>

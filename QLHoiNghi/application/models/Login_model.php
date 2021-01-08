@@ -21,7 +21,11 @@ class Login_model extends CI_Model {
 	    $dl = $dl[0]['level'];
 	   
 	    }
-	     return $dl;
+	    else
+	    {
+	     $dl = '';
+	    }
+	    return $dl;
 	}
 
 }	

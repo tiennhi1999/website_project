@@ -116,6 +116,85 @@ class HN_model extends CI_Model {
 	    $dl = $dl->result_array();
 	    return $dl;
 	}
+	public function kiemtrangay($id)
+	{
+	    $this->db->select('*');
+	    $this->db->where('mahn', $id);
+	    $date = date("Y-m-d H:i:s");
+	    $this->db->where('hoi_nghi.thoigian <=', $date);
+	    $dl = $this->db->get('hoi_nghi');
+	    $dl = $dl->result_array();
+	    if (!empty($dl)) {
+	    	return 1;
+	    }
+	    else
+	    {
+	    	return 0;
+	    }
+	}
+	public function kiemtradangki($id, $idhn)
+	{
+	    $this->db->select('*');
+	    $this->db->where('ma_user', $id);
+	    $this->db->where('hn_id', $idhn);
+	    $dl =  $this->db->get('ds_dangki');
+	    $dl = $dl->result_array();
+    	if ($this->kiemtrangay($idhn) == 1) {
+    			return 0;
+    	}	
+	    if (empty($dl)) {
+	    	return 1;
+	    }
+	    else
+	    {
+	    	return 2;
+	    }	
+	}
+	public function loadTinDanhMuc($iddanhmuc)
+	{
+	    $this->db->select('*');
+	    $this->db->from('hoi_nghi');
+	    $this->db->join('danhmuc', 'hoi_nghi.iddanhmuc = danhmuc.id', 'left');
+	    $this->db->where('danhmuc.id', $iddanhmuc);
+	    $dl = $this->db->get();
+	    $dl = $dl->result_array();
+	    return $dl;
+	}	
+	public function loadHNCT($id)
+	{
+	    $this->db->select('*');
+	    $this->db->from('hoi_nghi');
+	    $this->db->join('ds_dangki', 'ds_dangki.hn_id = hoi_nghi.mahn', 'left');
+	    $this->db->where('ma_user', $id);
+	    $dl = $this->db->get();
+	    $dl = $dl->result_array();
+	    return $dl;
+
+	}
+	public function loadHNCTChuaDuyet($id)
+	{
+	    $this->db->select('*');
+	    $this->db->from('hoi_nghi');
+	    $this->db->join('ds_dangki', 'ds_dangki.hn_id = hoi_nghi.mahn', 'left');
+	    $this->db->where('ma_user', $id);
+	    $this->db->where('duyet', 0);
+	    $dl = $this->db->get();
+	    $dl = $dl->result_array();
+	    return $dl;
+
+	}
+	public function loadHNCTDaDuyet($id)
+	{
+	    $this->db->select('*');
+	    $this->db->from('hoi_nghi');
+	    $this->db->join('ds_dangki', 'ds_dangki.hn_id = hoi_nghi.mahn', 'left');
+	    $this->db->where('duyet', 1);
+	    $dl = $this->db->get();
+	    $dl = $dl->result_array();
+	    return $dl;
+
+	}
+	
 }
 
 /* End of file HN_model.php */

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Quan ly tin</title>
-		<script type="text/javascript" src="<?= base_url() ?>/vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>/vendor/bootstrap.js"></script>
  	<script type="text/javascript" src="<?= base_url() ?>/1.js"></script>
  	<script src="https://kit.fontawesome.com/98a2e27e25.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="<?= base_url() ?>/vendor/bootstrap.css">
@@ -28,7 +28,18 @@
 	{
 		require 'header_cus2.php';
 	} ?>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+					<div  style="color: #2c3e50">
+					<h1 class="display-5">DANH SÁCH CÁC HỘI NGHỊ</h1>
+					
+					<hr class="m-y-md">
+				</div>
+			</div>
 		
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">		
 			<div class="col-sm-9">
@@ -39,7 +50,7 @@
 	
 							<div class="text-xs-center">
 								<h3 class="tieudetin1 fontoswarld"><?php echo $value['TENHN'] ?></h3>
-								<hr class="m-y-md">
+								<br>
 							</div>
 							<img class="" src="<?php echo $value['HINHANH'] ?>" alt="Card image cap">
 							<br>
@@ -77,16 +88,50 @@
 						<h3 class="fontoswarld">Danh mục </h3>
 						<ul class="fontroboto">
 									<?php foreach ($cacdanhmuc as $key => $value): ?>
-								<li><a href="<?php echo base_url() ?>/tintuc/danhmuc/<?php echo  $value['id'] ?>"> <?php echo $value['tendanhmuc'] ?></a></li>
+								<li><a  href="<?php echo base_url() ?>/HoiNghi/danhmuc/<?php echo  $value['id'] ?>"> <?php echo $value['tendanhmuc'] ?></a></li>
 							<?php endforeach ?>
 						</ul>
-					</div><!--  	het listlink  -->
+					</div><!--  
+						het listlink  -->
+						<?php  if ($this->session->userdata('loai') == 1) {?>
+				
+						
 
+					<?php  }
+					else
+						{?>
+					<div class="row">
+						<div class="col-sm-12 push-sm-3">
+							<?php foreach ($dulieutin as $key => $value): ?>
+								<?php  
+									if ($kiemtra == 1) {?>
+									<a href="<?php echo base_url(); ?>DangKiTG/Them/<?php echo $value['MAHN']; ?>"><button  class="btn btn-success btn-lg" style="color: white">Đăng kí</button></a>
+									<?php } ?>
+									<?php  
+									if ($kiemtra == 2) {?>
+									<a href="<?php echo base_url(); ?>DangKiTG/Huy/<?php echo $value['MAHN']; ?>"><button  class="btn btn-warning btn-lg" style="color: white">Hủy đăng kí</button></a>
+									<?php } ?>
+									<?php  
+									if ($kiemtra == 0) {?>
+									<button  class="btn btn-danger btn-lg" disabled>Đã diễn ra</button>
+									<?php } ?>
+									
+									
+							<?php endforeach ?>
+								
+						</div>
+
+
+					</div>
+				<?php } ?>
 					
 
 				</div>  <!-- HET COT 3 -->
 			</div>
 		</div>
 	</div>
+	
 </body>
+<script >
+</script>
 </html>
