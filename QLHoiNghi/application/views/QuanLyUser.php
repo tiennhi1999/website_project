@@ -38,7 +38,7 @@
 	</div>
 	<div class="container">
 		<div class="row">		
-			<div class="col-sm-9 push-sm-2">
+			<div class="col-sm-9">
 
 				<!-- khoi danh sach tin -->
 				<div class="row">
@@ -57,14 +57,11 @@
 						<tbody>
 							
 								
-								
-							<tr>
-								<?php for ($i=1; $i < count($danhsach)+1; $i++) { ?>
-									<td><?php echo $i ?></td>
-								<?php } ?>
-
-								<?php foreach ($danhsach  as $key => $value): ?>
-								
+								<?php 	$i = 1 ?>
+							<?php foreach ($danhsach  as $key => $value): ?>
+									
+								<tr>
+								<td><?php echo $i; $i++?></td>	
 								<td><?php echo $value['TENUSER'] ?></td>
 								<td><?php echo $value['USERNAME'] ?></td>
 								<td><?php echo $value['USER_EMAIL'] ?></td>
@@ -99,9 +96,10 @@
 									
 								</td>
 								<?php } ?>
-								
+
+								</tr>
 								<?php endforeach ?>
-							</tr>
+								
 							
 								
 							
@@ -110,9 +108,38 @@
 					</table>
 					
 					</div>
-				</div>
-				
+				</div> <!-- het cot 9 -->
+				<div class="col-sm-3">
+					<div class="phansearch  wow  fadeInUp">
+						<form action="<?php echo base_url(); ?>Admin/timkiemuser" method="post">
+							 <input name="tenuser" type="text" class="form-control phansearchct"  placeholder="Search">
+							 
+							<button type="submit" class="iconsearch"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
 
+					<div class="khoilistlink my-2  wow  fadeInUp">
+						<h3 class="fontoswarld">LỌC </h3>
+						<ul class="fontroboto">
+								<li><a href="<?php echo base_url() ?>Admin/locuser/1"> Đã chặn</a></li>
+								<li><a href="<?php echo base_url() ?>Admin/locuser/2"> Không chặn</a></li>
+								
+						</ul>
+					</div><!--  
+						het listlink  -->
+
+					<div class="khoilistlink my-2  wow  fadeInUp">
+							<h3 class="fontoswarld">SẮP XẾP THEO TÊN</h3>
+							<ul class="fontroboto">
+
+									<li><a  href="<?php echo base_url()  ?>Admin/sapxepuser/1"> Tăng dần </a></li>
+
+									<li><a  href="<?php echo base_url()  ?>Admin/sapxepuser/2"> Giảm dần </a></li>
+							</ul>
+					</div><!--  
+							het listlink  -->
+
+				</div>  <!-- HET COT 3 -->
 			</div>
 		</div>
 	</div>

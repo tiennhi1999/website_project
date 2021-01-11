@@ -248,7 +248,28 @@ class 	Admin extends CI_Controller {
 	{
 		$this->HN_model->updateBoChan($id);
 	}
+	public function timkiemuser()
+	{
+	    $ten = $this->input->post('tenuser');
+	    $dl = $this->HN_model->duyetTimKiem($ten);
+	    $dl = array('danhsach' => $dl);
 
+	    $this->load->view('QuanLyUser', $dl, FALSE);
+	}	
+	public function sapxepuser($ma)
+	{
+	   $dl =  $this->HN_model->sxUser($ma);
+	   $dl = array('danhsach' => $dl);
+
+	    $this->load->view('QuanLyUser', $dl, FALSE);
+	}
+	public function locuser($ma)
+	{
+	     $dl =  $this->HN_model->filter($ma);
+	   $dl = array('danhsach' => $dl);
+
+	    $this->load->view('QuanLyUser', $dl, FALSE);
+	}
 }
 
 /* End of file HoiNghi.php */

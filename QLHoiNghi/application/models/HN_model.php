@@ -232,6 +232,51 @@ class HN_model extends CI_Model {
 	    $dl = array('chan' => 0 );
 	    return $this->db->update('user_', $dl);
 	}
+	public function duyetTimKiem($ten)
+	{	
+		if ($ten != '') {
+			 $this->db->or_like('username', $ten, 'BOTH');
+			 $this->db->order_by('username', 'desc');
+	    	$dl = $this->db->get('user_');
+	    	$dl = $dl->result_array();
+		}
+		else
+		{
+			$dl = $this->loadUsers();
+		}
+		return $dl;
+	   
+	}
+	public function sxUser($ma)
+	{
+		$this->db->where('level', 0);
+	    if ($ma == 1) {
+	    	$this->db->order_by('tenuser', 'asc');
+	    }
+	    else
+	    {
+	    	$this->db->order_by('tenuser', 'desc');
+	    }
+
+	    $dl = $this->db->get('user_');
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
+	public function filter($ma)
+	{
+		$this->db->where('level', 0);
+	    if ($ma == 1) {
+	    	$this->db->where('chan', 1);
+	    }
+	    else
+	    {
+	    	$this->db->where('chan', 0);
+	    }
+
+	    $dl = $this->db->get('user_');
+	    $dl = $dl->result_array();
+	    return $dl;
+	}
 	
 }
 
